@@ -1,10 +1,10 @@
-package com.ecl.nanayit.course1.mycoolapp;
+package com.SpringCore.dependecyInjection;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MycoolappApplicationTests {
+class DependecyInjectionApplicationTests {
 
 	@Test
 	void contextLoads() {

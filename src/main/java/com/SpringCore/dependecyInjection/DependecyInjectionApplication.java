@@ -1,13 +1,13 @@
-package com.ecl.nanayit.course1.mycoolapp;
+package com.SpringCore.dependecyInjection;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MycoolappApplication {
+public class DependecyInjectionApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MycoolappApplication.class, args);
-	
-	} 
+		SpringApplication.run(DependecyInjectionApplication.class, args);
+	}
+
 }
