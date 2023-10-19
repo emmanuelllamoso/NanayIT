@@ -1,13 +1,13 @@
-package com.ecl.nanayit.course1.mycoolapp;
+package com.ecl.nanayit.course1.actuator;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MycoolappApplication {
+public class ActuatorApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MycoolappApplication.class, args);
-	
-	} 
+		SpringApplication.run(ActuatorApplication.class, args);
+	}
+
 }
