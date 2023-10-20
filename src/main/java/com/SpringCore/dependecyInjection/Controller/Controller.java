@@ -10,24 +10,10 @@ import com.SpringCore.dependecyInjection.commor.Coach;
 @RestController
 public class Controller {
 	
-	//define a private field for the dependency
-	private Coach coach;
-
-	//define a constructor for dependency injection
-//	@Autowired
-//	public Controller(Coach coach) {
-//		this.coach = coach;
-//	}
+	private Coach coach; 
 	
-	//Define a setter for dependency injection
-//	@Autowired
-//	public void setCoach(Coach coach) {
-//		this.coach = coach; 
-//	}
-	
-	//Qualifier annotation for setter and constructor if we have multiple beans
 	@Autowired
-	public void setCoach(@Qualifier("trackCoach")Coach coach) {
+	public Controller(@Qualifier("baseballCoach")Coach coach) {
 		this.coach = coach; 
 	}
 	
