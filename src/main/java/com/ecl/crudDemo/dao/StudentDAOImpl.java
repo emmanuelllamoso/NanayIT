@@ -14,7 +14,7 @@ import jakarta.persistence.TypedQuery;
 @Repository
 public class StudentDAOImpl implements StudentDAO{
 	
-	// define fild for entity manager
+	// define field for entity manager
 	private EntityManager entityManager; 
 	
 	//define constructor
@@ -55,6 +55,32 @@ public class StudentDAOImpl implements StudentDAO{
 		return theQuery.getResultList();
 	}
 
-	
+	@Override
+	@Transactional
+	public void update(Student theStudent) {
+		// TODO Auto-generated method stub
+		entityManager.merge(theStudent);
+	}
 
+	@Override
+	@Transactional
+	public void delete(Integer id) {
+		//Delete student with createQuery
+		
+		//entityManager.createQuery("DELETE FROM Student WHERE id=" + id).executeUpdate();
+		 
+		//look for the student by ID 
+		Student student = findById(id); 
+		
+		//remove the student
+		entityManager.remove(student);
+	}
+
+	@Override
+	@Transactional
+	public int deleteAll() {
+		int numRowsDelete = entityManager.createQuery("DELETE FROM Student ").executeUpdate(); 
+		
+		return numRowsDelete;
+	}
 }
